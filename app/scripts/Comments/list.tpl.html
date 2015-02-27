@@ -1,0 +1,13 @@
+<a href="#/">Home</a>
+<form ng-submit="addSongs()">
+    <input type="text" ng-model="listInput">
+    <br>
+    <button>Submit Playlist</button>
+    <br>
+</form>
+
+<ul>
+	<li ng-repeat="playlist in playlists">
+		<a href="{{playlist.ListURL}}">{{playlist.ListURL}}</a>
+	</li>
+</ul>

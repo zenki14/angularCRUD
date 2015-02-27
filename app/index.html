@@ -21,31 +21,36 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-app="Songs">
 
     <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+        <!-- <a href="#/">Playlist</a> -->
+        <div class="container" ng-view></div>
     </div>
+    
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script>
+    <script src="//connect.soundcloud.com/sdk.js"></script>
+    <script>
+      SC.initialize({
+        client_id: "0117b4fe2f04c65bfa368b78bde94021"
+      });
+    </script>
+    
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/songs/songs.controller.js"></script>
+        <script src="scripts/comments/list.controller.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
