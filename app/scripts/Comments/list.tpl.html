@@ -1,6 +1,6 @@
-<a href="#/">Home</a>
 <form ng-submit="addSongs()">
-    <input type="text" ng-model="listInput">
+    <input type="text" ng-model="listInput" placeholder="Enter Soundcloud URL">
+    <input type="text" ng-model="listGenre" placeholder="Enter Genre">
     <br>
     <button>Submit Playlist</button>
     <br>
@@ -8,6 +8,6 @@
 
 <ul>
 	<li ng-repeat="playlist in playlists">
-		<a href="{{playlist.ListURL}}">{{playlist.ListURL}}</a>
+		<a ng-click="RoutePlay(playlist.objectId)">{{playlist.ListURL}}</a><button ng-click="Remove(playlist.objectId)">X</button>
 	</li>
 </ul>

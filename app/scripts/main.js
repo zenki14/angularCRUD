@@ -19,12 +19,12 @@
 
 		$routeProvider
 			.when('/', {
-				templateUrl: 'scripts/songs/songs.tpl.html',
-				controller: 'SongsController'
-			})
-			.when('/list', {
 				templateUrl: 'scripts/comments/list.tpl.html',
 				controller: 'ListController'
+			})
+			.when('/playlist/:id', {
+				templateUrl: 'scripts/songs/songs.tpl.html',
+				controller: 'SongsController'
 			})
 
 	})

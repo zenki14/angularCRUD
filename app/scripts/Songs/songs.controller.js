@@ -2,11 +2,10 @@
 
 	angular.module('Songs')
 
-	.controller('SongsController', ['$scope', '$location', '$rootScope',
+	.controller('SongsController', ['$http', '$scope', '$rootScope', '$routeParams', 'PARSE',
 		
-		function ($scope, $location, $rootScope) {
+		function ($http, $scope, $rootScope, $routeParams, PARSE) {
 
-			var r = $location.path();
 
 		// 	if(r === '/') {
 		// 	SongsFactory.retrieve().success( function (data){
@@ -27,14 +26,20 @@
 				// $http.post(PARSE.URL + 'classes/Whiskey', w, PARSE.CONFIG)
 				// 	.success( function (){
 				// 		$scope.whiskey = {};
-				// }
-
-				$rootScope.$on('song:added', function (){
-					console.log('Tune Added!');
-						
-				})
+				
+				
+				var LoadPlaylist = function(){
+					console.log($routeParams.id);
+					$http.get(PARSE.URL + 'classes/Lists/' + $routeParams.id, PARSE.CONFIG)
+					.success(function (data){
+						console.log(data);
+					$scope.ListURL = data.ListURL;
+					})
+				} 
+				LoadPlaylist();
 
 			}
+
 		
 
 

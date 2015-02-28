@@ -1,5 +1,5 @@
-<div plangular="https://soundcloud.com/revo909/sets/current-tunes-ii">
-  <a href="#/list">List of Playlists</a>
+<div ng-if="ListURL" plangular = "{{ListURL}}" > 
+  <a href="#/">Add a Playlist</a>
     <div class="table mb1">
       <h3 class="table-cell full-width m0">{{ user.username || '&nbsp;' }}</h3>
       <small class="h6 table-cell nowrap">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
