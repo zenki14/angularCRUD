@@ -26,7 +26,11 @@
     <div class="hero-unit">
         <div class="container" ng-view></div>
     </div>
-    
+     <script>
+      SC.initialize({
+        client_id: "0117b4fe2f04c65bfa368b78bde94021"
+      });
+    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -36,11 +40,7 @@
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script>
     <script src="//connect.soundcloud.com/sdk.js"></script>
-    <script>
-      SC.initialize({
-        client_id: "0117b4fe2f04c65bfa368b78bde94021"
-      });
-    </script>
+  
     
     <!-- endbower -->
     <!-- endbuild -->
