@@ -6,13 +6,6 @@
 		
 		function ($http, $scope, $location, $rootScope, PARSE, PlaylistFactory) {
 
-			// var r = $location.path();
-
-		// 	if(r === '/') {
-		// 	SongsFactory.retrieve().success( function (data){
-		// 		$scope.allSongs = data.results;
-		// 	});
-		// }
 
 
 			$scope.addSongs = function (){
@@ -57,28 +50,7 @@
 						})
 					} 
 				
-		// load();
 
-			// $http.post(PARSE.URL + 'classes/Lists', {}, PARSE.CONFIG)
-				// .success( function (data) {
-				// 	$scope.allWhiskey = data.results;
-			// }
-
-
-
-			// $scope.addSongs = function (w) {
-			// 	SongsFactory.add(w);
-				// $http.post(PARSE.URL + 'classes/Whiskey', w, PARSE.CONFIG)
-				// 	.success( function (){
-				// 		$scope.songs = {};
-				// }
-
-			// 	$rootScope.$on('song:added', function (){
-			// 		console.log('Tune Added!');
-						
-			// 	})
-
-			// }
 		
 
 
