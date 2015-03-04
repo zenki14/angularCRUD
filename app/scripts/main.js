@@ -15,7 +15,7 @@
 
 	})
 
-	.config( function ($routeProvider) {
+	.config(['$routeProvider', function ($routeProvider) {
 
 		$routeProvider
 			.when('/', {
@@ -26,8 +26,26 @@
 				templateUrl: 'scripts/songs/songs.tpl.html',
 				controller: 'SongsController'
 			})
+			.when('/login', {
+			  templateUrl: 'scripts/users/user.login.tpl.html',
+			  controller: 'UserCtrl'
+			})
+			.when('/register', {
+			  templateUrl: 'scripts/users/user.register.tpl.html',
+			  controller: 'UserCtrl'
+			})
+			.otherwise('/');
 
-	})
+	}])
+
+	.run(['$rootScope', 'UserFactory', 'PARSE',
+		function ($rootScope, UserFactory, PARSE){
+			$rootScope.$on('$routeChangeStart', function (){
+				UserFactory.status();
+			})
+		}
+
+	])
 
 
 
