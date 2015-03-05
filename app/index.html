@@ -20,19 +20,26 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-  </head>
-  <body ng-app="Songs">
-
-    <div class="hero-unit">
-        <div class="container" ng-view></div>
-    </div>
-    <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script>
     <script src="//connect.soundcloud.com/sdk.js"></script>
     <script>
       SC.initialize({
         client_id: "0117b4fe2f04c65bfa368b78bde94021"
       });
     </script>
+  </head>
+  <body ng-app="Songs">
+
+    <div class="hero-unit">
+        <div class="container" ng-view></div>
+    </div>
+
+    <!-- <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script>
+    <script src="//connect.soundcloud.com/sdk.js"></script>
+    <script>
+      SC.initialize({
+        client_id: "0117b4fe2f04c65bfa368b78bde94021"
+      });
+    </script> -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -40,6 +47,8 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/angular/angular.min.js"></script>
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script>
    
   
     
@@ -51,6 +60,8 @@
         <script src="scripts/songs/songs.controller.js"></script>
         <script src="scripts/comments/list.controller.js"></script>
         <script src="scripts/comments/list.factory.js"></script>
+ <!--        // <script src="scripts/users/users.controller.js"></script>
+        // <script src="scripts/users/users.factory.js"></script> -->
 
         <!-- endbuild -->
 </body>
